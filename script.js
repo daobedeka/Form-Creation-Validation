@@ -44,7 +44,8 @@ document.addEventListener('DOMContentLoaded', function () {
         else if(isValid==false){
     
             feedbackDiv.style.display="block";
-             feedbackDiv.innerHTML=`${messages.map(i => i).join('<br>')}`
+            feedbackDiv.style.color = "#dc3545"
+             feedbackDiv.innerHTML=`${messages.join('<br>')}`
         }
     })
 
