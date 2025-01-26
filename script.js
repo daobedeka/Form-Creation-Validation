@@ -34,15 +34,17 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         
 
-        if(isValid==false){
+        if(isValid==true){
+          
             feedbackDiv.style.display="block";
-             feedbackDiv.innerHTML=`${message.map(i => i).join('<br>')}`
+            feedbackDiv.style.color="#28a745";
+            feedbackDiv.textContent="Registration successful!";
           
         }
-        else{
-          feedbackDiv.style.display="block";
-          feedbackDiv.style.color="#28a745";
-          feedbackDiv.textContent="Registration successful!";
+        else if(isValid==false){
+    
+            feedbackDiv.style.display="block";
+             feedbackDiv.innerHTML=`${message.map(i => i).join('<br>')}`
         }
     })
 
