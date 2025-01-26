@@ -10,12 +10,12 @@ document.addEventListener('DOMContentLoaded', function () {
         const password=document.getElementById('password').value.trim();
 
         let isValid=true;
-        let message=[];
+        let messages=[];
 
         //Validating username
         if(username.length<3){
             isValid=false;
-            message.push('Username must be at least 3 characters long.')
+            messages.push('Username must be at least 3 characters long.')
         } 
 
         //validating Email
@@ -24,13 +24,13 @@ document.addEventListener('DOMContentLoaded', function () {
            
         }else{
             isValid=false
-            message.push('your email is not correct')
+            messages.push('your email is not correct')
         }
 
         //validating Password
         if(password.length<8){
             isValid=false
-            message.push("Weak password")
+            messages.push("Weak password")
         }
         
 
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
         else if(isValid==false){
     
             feedbackDiv.style.display="block";
-             feedbackDiv.innerHTML=`${message.map(i => i).join('<br>')}`
+             feedbackDiv.innerHTML=`${messages.map(i => i).join('<br>')}`
         }
     })
 
